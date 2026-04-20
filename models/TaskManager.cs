@@ -20,6 +20,19 @@ namespace git_practice.models
             return tasks;
         }
 
+        public void RemoveTask(int id)
+        {
+            foreach (var task in tasks)
+            {
+                if (task.Id == id)
+                { 
+                    tasks.Remove(task);
+                    break;
+                }
+            }
+        
+        }
+
 
     }
 }
